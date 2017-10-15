@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            list-style: none;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border: 1px #1f91ff solid;
+            position: relative;
+            /*transform-style:preserve-3d;选择变形的样式是3d效果*/
+            transform-style:preserve-3d;
+            /*perspective: 1000px;视角值越小显示的越大*/
+            perspective: 800px;
+            transform: rotateX(30deg) rotateY(30deg);
+            transition: all 5s;
+
+
+        }
+
+        .box:hover{
+            transform: rotateX(390deg) rotateY(390deg);
+        }
+        .box div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 35px;
+
+
+        }
+        .shang{
+            /*background-color: rgba(119,255,103,0.5);该颜色的透明度设置为0.5*/
+            background-color: rgba(119,255,103,0.5);
+            /*transform:rotateX(90deg) translateZ(100px);变形：旋转X正值90度 位移Z轴100px*/
+            transform:rotateX(90deg) translateZ(100px);
+
+        }
+        .xia{
+            background-color: rgba(37, 29, 232, 0.5);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .qian{
+            background-color: rgba(255, 176, 193,0.5);
+            transform:translateZ(100px)
+        }
+        .hou{
+            background-color: rgba(231, 255, 38, 0.5);
+            transform: rotateX(180deg) translateZ(100px);
+        }
+        .zuo{
+            background-color: rgba(23,255,111,0.5);
+            transform:rotateY(-90deg) translateZ(100px);
+        }
+        .you{
+            background-color: rgba(258,13,66,0.5);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="shang">上面</div>
+    <div class="xia">下面</div>
+    <div class="zuo">左面</div>
+    <div class="you">右面</div>
+    <div class="qian">前面</div>
+    <div class="hou">后面</div>
+</div>
+</body>
+</html>
